@@ -1,23 +1,18 @@
-import random
-print("Lista de números aleatórios:")
-listanum = []
+def insertion_sort(arr):
+    y=0
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i-1
+        while j >=0 and key < arr[j] : 
+                arr[j+1] = arr[j] 
+                j -= 1
+        arr[j+1] = key
+        y=y+1
 
-for i in range(5):
-    listanum.append(random.randint(1,9))
-
-print(listanum)
-
-def bubbleSort(listanum):
-
-    for iteracao in range(1, len(listanum)):
-        for indice in range(0, len(listanum) - iteracao):
-            if listanum[indice] > listanum[indice + 1]:
-                temp = listanum[indice]
-                listanum[indice] = listanum[indice + 1]
-                listanum[indice + 1] = temp
-
-
-bubbleSort(listanum)
-
-print("lista Ordenado:")
-print(listanum)
+    print("movimentos:",y)
+  
+arr = [5371, 3724, -13805, 16190, 3945] 
+insertion_sort(arr) 
+print ("Sorted array is:") 
+for i in range(len(arr)): 
+    print ("%d" %arr[i])
