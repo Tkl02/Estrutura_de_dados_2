@@ -3,7 +3,7 @@ import time
 
 start = time.time()
 
-with open("D:\desktopCODE\Estrutura_de_dados_2\Aula2\dados100.txt","r") as arquivo:
+with open("D:\desktopCODE\Estrutura_de_dados_2\Aula2\dados100_mil.txt","r") as arquivo:
     lista = arquivo.read().replace(" ","")
 
 x = lista.replace("[","").replace("]","").split(",")
@@ -32,4 +32,3 @@ with open ("senhas ordenadas.txt", "w") as arquivo:
 end = time.time()
 
 print("tempo de execuçao:", time.strftime("%H : %M : %S", time.gmtime(end-start)),":{0:.0f}".format((end-start)*1000))
-
