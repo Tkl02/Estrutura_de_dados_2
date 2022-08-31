@@ -1,14 +1,18 @@
 from posixpath import split
 import time
 
-start = time.time()
+start1 = time.time()
 
-with open("D:\desktopCODE\Estrutura_de_dados_2\Aula2\dados100.txt","r") as arquivo:
+# aquivo a ser lido
+
+with open("D:\desktopCODE\Estrutura_de_dados_2\Aula2\dados1000.txt","r") as arquivo:
     lista = arquivo.read().replace(" ","")
 
 x = lista.replace("[","").replace("]","").split(",")
 
 y = list(map(int,x))
+
+#funçao insertion sort
 
 def insertionSort(arr): 
     y=0
@@ -24,10 +28,39 @@ def insertionSort(arr):
 arr = y
 insertionSort(arr) 
 
-with open ("senhas ordenadas.txt", "w") as arquivo:
+# representaçao de arquivos organizados
+
+with open ("insert ordenado.txt", "w") as arquivo:
     arquivo.write("{}".format(arr))
 
-end = time.time()
+end1 = time.time()
 
-print("tempo de execuçao:", time.strftime("%H : %M : %S", time.gmtime(end-start)),":{0:.0f}".format((end-start)*1000))
-print ("resultado organizado")
+print("tempo de execuçao:", time.strftime("%H : %M : %S", time.gmtime(end1-start1)),":{0:.0f}".format((end1-start1)*1000))
+print ("insertion sort organizado")
+
+#funçao selection sort
+
+start2 = time.time()
+
+def selectionSort(arr2): 
+  
+    for i in range(len(arr2)): 
+  
+        min_idx = i 
+        for j in range(i+1, len(arr2)): 
+            if arr2[min_idx] > arr2[j]: 
+                min_idx = j 
+                  
+        arr2[i], arr2[min_idx] = arr2[min_idx], arr2[i] 
+  
+arr2 = y
+
+selectionSort(arr2)
+
+with open ("select ordenado.txt", "w") as arquivo:
+    arquivo.write("{}".format(arr2))
+
+end2 = time.time()
+
+print("tempo de execuçao:", time.strftime("%H : %M : %S", time.gmtime(end2-start2)),":{0:.0f}".format((end2-start2)*1000))
+print ("insertion sort organizado")
