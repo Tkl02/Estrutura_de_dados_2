@@ -3,12 +3,9 @@ import time
 
 start1 = time.time()
 
-
-# nome = 'nome: leonardo faustino'
-# algoritmo = 'algoritimo: select/insert sort'
 # aquivo a ser lido
 
-with open("C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados5.txt") as arquivo:
+with open("C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados5.txt","r") as arquivo:
     lista = arquivo.read().replace(" ","")
 
 x = lista.replace("[","").replace("]","").split(",")
