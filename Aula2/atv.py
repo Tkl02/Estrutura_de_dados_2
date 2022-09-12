@@ -4,7 +4,7 @@ import time
 start1 = time.time()
 
 nome = "\n nome: leonardo faustino"
-curso = "\n algoritomo: odernaçao por select/insert sort"
+curso = "\n algoritomo: odernacao por select/insert sort"
 
 # aquivo a ser lido
 
@@ -34,7 +34,7 @@ insertionSort(arr)
 # representaçao de arquivos organizados
 
 with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\insert ordenado.txt", "w") as arquivo:
-    arquivo.write("{}".format(arr))
+    arquivo.write("{}".format(arr)+nome+curso)
 
 end1 = time.time()
 
@@ -66,4 +66,4 @@ with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\select o
 end2 = time.time()
 
 print("tempo de execuçao:", time.strftime("%H : %M : %S", time.gmtime(end2-start2)),":{0:.0f}".format((end2-start2)*1000))
-print ("insertion sort organizado")
+print ("selection sort organizado")

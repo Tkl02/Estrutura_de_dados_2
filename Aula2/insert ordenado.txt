@@ -1,1 +1,3 @@
 [-13805, 3724, 3945, 5371, 16190]
+ nome: leonardo faustino
+ algoritomo: odernacao por select/insert sort
