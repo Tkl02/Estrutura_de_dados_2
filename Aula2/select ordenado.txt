@@ -1,3 +1,5 @@
 [-13805, 3724, 3945, 5371, 16190]
+
  nome: leonardo faustino
  algoritomo: odernacao por select/insert sort
+tempo de execucao: 00 : 00 : 00:0

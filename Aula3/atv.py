@@ -30,7 +30,7 @@ s=bogo_sort(a)
 
 end = time.time()
 
-tempo = ("tempo de execucao: "+ time.strftime("%H : %M : %S", time.gmtime(end-start)),":{0:.0f}".format((end-start)*1000))
+tempo = ("tempo de execucao: "+ time.strftime("%H : %M : %S", time.gmtime(end-start))+":{0:.0f}".format((end-start)*1000))
 
 with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula3\bogo ordenado.txt", "w") as arquivo:
     arquivo.write("{}\n\n{}{}{}".format(s,tempo,nome,curso).replace("(","").replace(")","").replace("'",""))

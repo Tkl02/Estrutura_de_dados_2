@@ -3,7 +3,7 @@ import time
 
 start1 = time.time()
 
-nome = "\n nome: leonardo faustino"
+nome = "\n\n nome: leonardo faustino"
 curso = "\n algoritomo: odernacao por select/insert sort"
 
 # aquivo a ser lido
@@ -28,18 +28,20 @@ def insertionSort(arr):
         arr[j+1] = key
         y=y+1
     print("movimentos",y)
+
 arr = y
+
 insertionSort(arr) 
 
 # representaçao de arquivos organizados
 
-with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\insert ordenado.txt", "w") as arquivo:
-    arquivo.write("{}".format(arr)+nome+curso)
-
 end1 = time.time()
 
-print("tempo de execuçao:", time.strftime("%H : %M : %S", time.gmtime(end1-start1)),":{0:.0f}".format((end1-start1)*1000))
-print ("insertion sort organizado")
+temp=("tempo de execucao:"+ time.strftime("%H : %M : %S", time.gmtime(end1-start1))+":{0:.0f}".format((end1-start1)*1000))
+
+with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\insert ordenado.txt", "w") as arquivo:
+    arquivo.write("{}{}{}\n{}".format(arr,nome,curso,temp).replace("(","").replace(")","").replace("'",""))
+
 
 #funçao selection sort
 
@@ -59,11 +61,9 @@ def selectionSort(arr2):
 arr2 = y
 
 selectionSort(arr2)
-
-with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\select ordenado.txt", "w") as arquivo:
-    arquivo.write("{}".format(arr2)+nome+curso)
-
 end2 = time.time()
 
-print("tempo de execuçao:", time.strftime("%H : %M : %S", time.gmtime(end2-start2)),":{0:.0f}".format((end2-start2)*1000))
-print ("selection sort organizado")
+temp2=("tempo de execucao: "+ time.strftime("%H : %M : %S", time.gmtime(end2-start2))+":{0:.0f}".format((end2-start2)*1000))
+
+with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\select ordenado.txt", "w") as arquivo:
+    arquivo.write("{}{}{}\n{}".format(arr2,nome,curso,temp2).replace("(","").replace(")","").replace("'",""))
