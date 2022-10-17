@@ -1,6 +1,6 @@
 from posixpath import split
 import time
-
+print("start: \n ")
 start1 = time.time()
 
 nome = "\n\n nome: leonardo faustino"
@@ -8,7 +8,7 @@ curso = "\n algoritomo: odernacao por select/insert sort"
 
 # aquivo a ser lido
 
-with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados5.txt', 'r') as arquivo:
+with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados500_mil.txt', 'r') as arquivo:
     lista = arquivo.read().replace(" ","")
 
 x = lista.replace("[","").replace("]","").split(",")
