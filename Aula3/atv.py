@@ -13,13 +13,13 @@ x = lista.replace("[","").replace("]","").split(",")
 a = list(map(int,x))
 
 start = time.time()
-
+	# Bogo Sort
 def bogo_sort(a):
 	def is_sorted(a):
 		for i in range(1,len(a)):
 			if a[i]<a[i-1]: return False
 		return True
-    
+    # gerar uma permutacao aleatoria
 	ct=0
 	while not is_sorted(a):
 		shuffle(a)

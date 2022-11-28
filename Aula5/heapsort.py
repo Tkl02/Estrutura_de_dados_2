@@ -13,27 +13,26 @@ x = lista.replace("[","").replace("]","").split(",")
 heap_rs = list(map(int,x))
 
 def heapify(lista, n, i):
-    largest = i  
-    l = 2 * i + 1  
-    r = 2 * i + 2 
- 
+    largest = i  # inicializa o maior elemento como raiz
+    l = 2 * i + 1  # esquerda = 2 * i + 1
+    r = 2 * i + 2  # direita = 2 * i + 2
+ # verifica se o filho da esquerda da raiz existe e se é maior que a raiz
     if l < n and lista[i] < lista[l]:
         largest = l
- 
+ # verifica se o filho da direita da raiz existe e se é maior que a raiz
     if r < n and lista[largest] < lista[r]:
         largest = r
- 
+ # troca a raiz se necessario
     if largest != i:
         (lista[i], lista[largest]) = (lista[largest], lista[i]) 
- 
         heapify(lista, n, largest)
- 
+# chamando a funcao heapsort
 def heapSort(lista):
     n = len(lista)
- 
+ # constroi um max heap
     for i in range(n // 2 - 1, -1, -1):
         heapify(lista, n, i)
- 
+ # extrai elementos um por um
     for i in range(n - 1, 0, -1):
         (lista[i], lista[0]) = (lista[0], lista[i]) 
         heapify(lista, i, 0)

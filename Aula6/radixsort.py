@@ -11,7 +11,7 @@ with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados5.tx
 x = lista.replace("[","").replace("]","").split(",")
 
 radix = list(map(int,x))
-
+# Função que faz a ordenação
 def countingSort(lista, exp1):
     n = len(lista)
     output = [0] * (n)
@@ -31,7 +31,7 @@ def countingSort(lista, exp1):
     for i in range(0, len(lista)):
         lista[i] = output[i]
  
-
+# Função principal que faz a ordenação
 def radixSort(lista):
  
     max1 = max(lista)

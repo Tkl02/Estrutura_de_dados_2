@@ -14,16 +14,16 @@ class car(threading.Thread):
     self.posicion = 0
     self.velocidad = random.uniform(0.1, 0.9)
 
-  def avanzar(self):
+  def avançar(self):
     time.sleep(1-self.velocidad)
     self.posicion += 1
 
-  def dist(self):
+  def posiçao(self):
     print(' ' * self.posicion + '🚗') 
 
   def run(self):
     while(True):
-      self.avanzar()
+      self.avançar()
 
 cars = []
 for i in range(cantcars):
@@ -34,7 +34,7 @@ for i in range(cantcars):
 def cls():
   os.system('cls' if os.name=='nt' else 'clear')
 
-def distponte():
+def posiçaoponte():
   print(' ' * inicioponte + '=' * largoponte)
 
 while(True):
@@ -42,8 +42,8 @@ while(True):
   cls()
   print('Apretá Ctrl + C varias veces para salir...')
   print()
-  distponte()
+  posiçaoponte()
   for v in cars:
-    v.dist()
-  distponte()
+    v.posiçao()
+  posiçaoponte()
   time.sleep(0.1)

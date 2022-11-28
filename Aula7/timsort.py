@@ -15,7 +15,6 @@ listaF = list(map(int,x))
 MIN_MERGE = 32
 
 def calcMinRun(n):
-
 	r = 0
 	while n >= MIN_MERGE:
 		r |= n & 1
@@ -28,7 +27,6 @@ def insertionSort(arr, left, right):
 		while j > left and arr[j] < arr[j - 1]:
 			arr[j], arr[j - 1] = arr[j - 1], arr[j]
 			j -= 1
-
 def merge(arr, l, m, r):
 
 	len1, len2 = m - l + 1, r - m

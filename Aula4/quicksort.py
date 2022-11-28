@@ -13,13 +13,18 @@ x = lista.replace("[","").replace("]","").split(",")
 quick_rs = list(map(int,x))
 
 def quicksort(lista, inicio=0, fim=None):
+    # Se fim não for especificado, considere a lista toda
     if fim is None:
         fim = len(lista)-1
+    # Se a lista tiver mais de um elemento
     if inicio < fim:
         p = partition(lista, inicio, fim)
         quicksort(lista, inicio, p-1)
         quicksort(lista, p+1, fim)
+        
+    # Retorna a lista ordenada
 def partition(lista, inicio, fim):
+    # Escolha o elemento mais à direita como pivô
     pivot = lista[fim]
     i = inicio
     for j in range(inicio, fim):

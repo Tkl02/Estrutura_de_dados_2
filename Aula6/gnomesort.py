@@ -11,7 +11,7 @@ with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados5.tx
 x = lista.replace("[","").replace("]","").split(",")
 
 gnome = list(map(int,x))
-
+# Função que faz a ordenação
 def gnomeSort( lista, n):
     index = 0
     while index < n:

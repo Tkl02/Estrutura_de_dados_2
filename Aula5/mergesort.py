@@ -11,8 +11,9 @@ with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados5.tx
 x = lista.replace("[","").replace("]","").split(",")
 
 merge_rs = list(map(int,x))
-
+# Função que faz a ordenação
 def mergesort(lista, inicio=0, fim=None):
+    # Se fim não for especificado, considere a lista toda
     if fim is None:
         fim = len(lista)
     if(fim - inicio > 1):
@@ -20,7 +21,7 @@ def mergesort(lista, inicio=0, fim=None):
         mergesort(lista, inicio, meio)
         mergesort(lista, meio, fim)
         merge(lista, inicio, meio, fim)
-
+# Função que faz a junção das listas
 def merge(lista, inicio, meio, fim):
     left = lista[inicio:meio]
     right = lista[meio:fim]
