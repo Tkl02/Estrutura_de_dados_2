@@ -47,3 +47,4 @@ while(True):
     v.posiçao()
   posiçaoponte()
   time.sleep(0.1)
+  
