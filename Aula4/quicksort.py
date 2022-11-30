@@ -1,11 +1,11 @@
 import time
-
+print("start")
 start = time.time()
 
 nome = "\n\n nome: leonardo faustino"
 curso = "\n\n algoritomo: odernacao por quick sort"
 
-with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados5.txt', 'r') as arquivo:
+with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados500_mil.txt', 'r') as arquivo:
     lista = arquivo.read().replace(" ","")
 
 x = lista.replace("[","").replace("]","").split(",")
@@ -42,3 +42,5 @@ tempo = ("tempo de execucao: "+ time.strftime("%H : %M : %S", time.gmtime(end-st
 
 with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula4\Quick ordenado.txt", "w") as arquivo:
     arquivo.write("{}\n\n{}{}{}".format(quick_rs,tempo,nome,curso).replace("(","").replace(")","").replace("'",""))
+    
+print("end")

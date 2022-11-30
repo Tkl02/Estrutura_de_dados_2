@@ -2,6 +2,8 @@ from random import randint,shuffle
 import string
 import time
 
+print("-=- start -=-")
+
 nome = "\n\n nome: leonardo faustino"
 curso = "\n\n algoritomo: odernacao por bogo sort"
 
@@ -35,3 +37,4 @@ tempo = ("tempo de execucao: "+ time.strftime("%H : %M : %S", time.gmtime(end-st
 with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula3\bogo ordenado.txt", "w") as arquivo:
     arquivo.write("{}\n\n{}{}{}".format(s,tempo,nome,curso).replace("(","").replace(")","").replace("'",""))
 
+print("-=- end -=-")

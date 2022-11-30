@@ -1,6 +1,6 @@
-49, [-13805, 3724, 3945, 5371, 16190]
+289, [-13805, 3724, 3945, 5371, 16190]
 
-tempo de execucao: 00 : 00 : 00, :0
+tempo de execucao: 00 : 00 : 00:1
 
  nome: leonardo faustino
 

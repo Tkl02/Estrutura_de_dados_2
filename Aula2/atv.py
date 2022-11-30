@@ -6,16 +6,16 @@ start1 = time.time()
 nome = "\n\n nome: leonardo faustino"
 curso = "\n algoritomo: odernacao por select/insert sort"
 
-comp2 = "comp:  62506458297    "
-mov2="move:  62506458282"
+
 # aquivo a ser lido
 
-with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados500_mil.txt', 'r') as arquivo:
+with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\melhorcaso.txt', 'r') as arquivo:
     lista = arquivo.read().replace(" ","")
 
 x = lista.replace("[","").replace("]","").split(",")
 
 y = list(map(int,x))
+
 
 #funçao insertion sort
 
@@ -41,15 +41,13 @@ end1 = time.time()
 temp=("tempo de execucao:"+ time.strftime("%H : %M : %S", time.gmtime(end1-start1))+":{0:.0f}".format((end1-start1)*1000))
 
 with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\insert ordenado.txt", "w") as arquivo:
-    arquivo.write("{}{}{}\n{}\n{}{}".format(arr,nome,curso,temp,comp2,mov2).replace("(","").replace(")","").replace("'",""))
+    arquivo.write("{}{}{}\n{}\n{}{}".format(arr,nome,curso,temp).replace("(","").replace(")","").replace("'",""))
 
 
 #funçao selection sort
 
 start2 = time.time()
 
-comp1 = "comp: 1,25E+11    "
-mov1 = "move:  499989"
 
 def selectionSort(arr2): 
   
@@ -70,6 +68,6 @@ end2 = time.time()
 temp2=("tempo de execucao: "+ time.strftime("%H : %M : %S", time.gmtime(end2-start2))+":{0:.0f}".format((end2-start2)*1000))
 
 with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\select ordenado.txt", "w") as arquivo:
-    arquivo.write("{}{}{}\n{}\n{}{}".format(arr2,nome,curso,temp2,comp1,mov1).replace("(","").replace(")","").replace("'",""))
+    arquivo.write("{}{}{}\n{}\n{}{}".format(arr2,nome,curso,temp2).replace("(","").replace(")","").replace("'",""))
 
-print("fim")
+print("fim -=-=-=-")

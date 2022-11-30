@@ -5,12 +5,13 @@ start = time.time()
 nome = "\n\n nome: leonardo faustino"
 curso = "\n\n algoritomo: odernacao por radix sort"
 n=0
-with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados5.txt', 'r') as arquivo:
+with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados500_mil.txt', 'r') as arquivo:
     lista = arquivo.read().replace(" ","")
 
 x = lista.replace("[","").replace("]","").split(",")
 
 radix = list(map(int,x))
+
 # Função que faz a ordenação
 def countingSort(lista, exp1):
     n = len(lista)
