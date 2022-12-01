@@ -1,5 +1,7 @@
 import time
 
+print("-=- start -=-")
+
 start = time.time()
 
 nome = "\n\n nome: leonardo faustino"
@@ -49,3 +51,5 @@ tempo = ("tempo de execucao: "+ time.strftime("%H : %M : %S", time.gmtime(end-st
 
 with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula7\Cocktail ordenado.txt", "w") as arquivo:
     arquivo.write("{}\n\n{}{}{}".format(a,tempo,nome,curso).replace("(","").replace(")","").replace("'",""))
+    
+print("-=- end -=-")

@@ -47,11 +47,10 @@ def shellSort(arr):
 			arr[j] = temp
 		gap /= 2
 
-
 arr = shell_rs
 
 n = len(arr)
-shellSort(n,arr)
+shellSort(arr)
 
 end = time.time()
 
