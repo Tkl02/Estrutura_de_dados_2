@@ -2,8 +2,6 @@ import string
 import time
 
 print("-=- start -=-")
-comp='comp  9999900000'
-move='move  2504053131  '
 
 nome = "\n\n nome: leonardo faustino"
 curso = "\n\n algoritomo: odernacao por bogo sort"
