@@ -1,3 +1,7 @@
+comp="comp: 0  "
+move="move: 600000  "
+pcomp="comp: 0  "
+pmove="move: 600000  "
 import time
 
 print("-=- start -=-")

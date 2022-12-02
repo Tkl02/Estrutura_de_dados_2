@@ -1,3 +1,7 @@
+comp="comp: 0  "
+move="move: 600000  "
+pcomp="comp: 0  "
+pmove="move: 600000  "
 import time
 
 start = time.time()
@@ -5,7 +9,7 @@ start = time.time()
 nome = "\n\n nome: leonardo faustino"
 curso = "\n\n algoritomo: odernacao por radix sort"
 n=0
-with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados500_mil.txt', 'r') as arquivo:
+with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados100_mil.txt', 'r') as arquivo:
     lista = arquivo.read().replace(" ","")
 
 x = lista.replace("[","").replace("]","").split(",")
@@ -50,4 +54,4 @@ end = time.time()
 tempo = ("tempo de execucao: "+ time.strftime("%H : %M : %S", time.gmtime(end-start))+":{0:.0f}".format((end-start)*1000))
 
 with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula6\radix ordenado.txt", "w") as arquivo:
-    arquivo.write("{}\n\n{}{}{}".format(lista,tempo,nome,curso).replace("(","").replace(")","").replace("'",""))
+    arquivo.write("{}\n\n{}{}{}\n{}{}".format(lista,tempo,nome,curso,comp,move).replace("(","").replace(")","").replace("'",""))

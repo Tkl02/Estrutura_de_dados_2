@@ -1,3 +1,9 @@
+comp="comp: 9999900000  "
+move="move: 0  "
+pcomp=" comp:  9999900000  "
+pmove="  move: 4999783757  "
+
+
 import string
 import time
 

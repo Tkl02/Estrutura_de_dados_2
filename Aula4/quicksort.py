@@ -1,3 +1,8 @@
+comp="comp: 1832277  "
+move="move: 87709  "
+pcomp="comp:  1832282  "
+pmove="  move: 137709  "
+
 import time
 print("start")
 start = time.time()
@@ -41,6 +46,6 @@ end = time.time()
 tempo = ("tempo de execucao: "+ time.strftime("%H : %M : %S", time.gmtime(end-start))+":{0:.0f}".format((end-start)*1000))
 
 with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula4\Quick ordenado.txt", "w") as arquivo:
-    arquivo.write("{}\n\n{}{}{}".format(quick_rs,tempo,nome,curso).replace("(","").replace(")","").replace("'",""))
+    arquivo.write("{}\n\n{}{}{}{}{}".format(quick_rs,tempo,nome,curso,move,comp).replace("(","").replace(")","").replace("'",""))
     
 print("end")

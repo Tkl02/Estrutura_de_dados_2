@@ -1,3 +1,8 @@
+pcomp1="4999783757"
+pmove1="4999783757"
+pcomp2="4999950000"
+pmove2="66615"
+
 from posixpath import split
 import time
 print("start: \n ")
@@ -41,7 +46,7 @@ end1 = time.time()
 temp=("tempo de execucao:"+ time.strftime("%H : %M : %S", time.gmtime(end1-start1))+":{0:.0f}".format((end1-start1)*1000))
 
 with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\insert ordenado.txt", "w") as arquivo:
-    arquivo.write("{}{}{}\n{}\n{}{}".format(arr,nome,curso,temp).replace("(","").replace(")","").replace("'",""))
+    arquivo.write("{}{}{}\n{}\n{}{}".format(arr,nome,curso,temp,pmove1,pcomp1).replace("(","").replace(")","").replace("'",""))
 
 
 #funçao selection sort
@@ -68,6 +73,6 @@ end2 = time.time()
 temp2=("tempo de execucao: "+ time.strftime("%H : %M : %S", time.gmtime(end2-start2))+":{0:.0f}".format((end2-start2)*1000))
 
 with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\select ordenado.txt", "w") as arquivo:
-    arquivo.write("{}{}{}\n{}\n{}{}".format(arr2,nome,curso,temp2).replace("(","").replace(")","").replace("'",""))
+    arquivo.write("{}{}{}\n{}\n{}{}".format(arr2,nome,curso,temp2,pcomp2,pmove2).replace("(","").replace(")","").replace("'",""))
 
 print("fim -=-=-=-")

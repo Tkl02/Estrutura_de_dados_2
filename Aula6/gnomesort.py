@@ -1,3 +1,8 @@
+comp="comp: 99999  "
+move="move: 0  "
+pcomp="comp:  4999851708  "
+pmove="  move: 4999783757  "
+
 import time
 print("start")
 start = time.time()
@@ -35,6 +40,6 @@ end = time.time()
 tempo = ("tempo de execucao: "+ time.strftime("%H : %M : %S", time.gmtime(end-start))+":{0:.0f}".format((end-start)*1000))
 
 with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula6\gnome ordenado.txt", "w") as arquivo:
-    arquivo.write("{}\n\n{}{}{}".format(gnome,tempo,nome,curso).replace("(","").replace(")","").replace("'",""))
+    arquivo.write("{}\n\n{}{}{}\n{}{}".format(gnome,tempo,nome,curso,comp,move).replace("(","").replace(")","").replace("'",""))
 
 print("end")

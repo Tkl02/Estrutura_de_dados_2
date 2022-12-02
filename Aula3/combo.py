@@ -1,3 +1,7 @@
+comp="comp: 1500006  "
+move="move: 0  "
+pcomp=" comp:  2100000  "
+pmove="  move: 744206  "
 import string
 import time
 

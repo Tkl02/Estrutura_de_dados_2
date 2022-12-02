@@ -1,3 +1,8 @@
+comp="comp: 1768927  "
+move="move: 1668928  "
+pcomp="comp:  1768927  "
+pmove="  move: 1668928  "
+
 import time
 print("start")
 start = time.time()
@@ -47,6 +52,6 @@ end = time.time()
 tempo = ("tempo de execucao: "+ time.strftime("%H : %M : %S", time.gmtime(end-start))+":{0:.0f}".format((end-start)*1000))
 
 with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula5\Merge ordenado.txt", "w") as arquivo:
-    arquivo.write("{}\n\n{}{}{}".format(merge_rs,tempo,nome,curso).replace("(","").replace(")","").replace("'",""))
+    arquivo.write("{}\n\n{}{}{}\n{}{}".format(merge_rs,tempo,nome,curso,comp,move).replace("(","").replace(")","").replace("'",""))
     
 print("end")

@@ -1,7 +1,0 @@
-[5371,3724,-13805,16190,3945]
-
-tempo de execucao: 00 : 00 : 00:0
-
- nome: leonardo faustino
-
- algoritomo: odernacao por radix sort
