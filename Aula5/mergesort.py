@@ -10,7 +10,7 @@ start = time.time()
 nome = "\n\n nome: leonardo faustino"
 curso = "\n\n algoritomo: odernacao por merge sort"
 
-with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados500_mil.txt', 'r') as arquivo:
+with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\melhorcaso.txt', 'r') as arquivo:
     lista = arquivo.read().replace(" ","")
 
 x = lista.replace("[","").replace("]","").split(",")
@@ -53,5 +53,8 @@ tempo = ("tempo de execucao: "+ time.strftime("%H : %M : %S", time.gmtime(end-st
 
 with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula5\Merge ordenado.txt", "w") as arquivo:
     arquivo.write("{}\n\n{}{}{}\n{}{}".format(merge_rs,tempo,nome,curso,comp,move).replace("(","").replace(")","").replace("'",""))
+
+with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula5\Merge ordenado.txt", "w") as arquivo:
+    arquivo.write("{}\n\n{}{}{}\n{}{}".format(merge_rs,tempo,nome,curso,pcomp,pmove).replace("(","").replace(")","").replace("'",""))
     
 print("end")

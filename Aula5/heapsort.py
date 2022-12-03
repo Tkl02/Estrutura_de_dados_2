@@ -9,7 +9,7 @@ start = time.time()
 nome = "\n\n nome: leonardo faustino"
 curso = "\n\n algoritomo: odernacao por heap sort"
 
-with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\dados500_mil.txt', 'r') as arquivo:
+with open(r'C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula2\melhorcaso.txt', 'r') as arquivo:
     lista = arquivo.read().replace(" ","")
 
 x = lista.replace("[","").replace("]","").split(",")
@@ -47,7 +47,10 @@ end = time.time()
 
 tempo = ("tempo de execucao: "+ time.strftime("%H : %M : %S", time.gmtime(end-start))+":{0:.0f}".format((end-start)*1000))
 
-with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula5\heap ordenado.txt", "w") as arquivo:
+with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula5\mheap ordenado.txt", "w") as arquivo:
     arquivo.write("{}\n\n{}{}{}\n{}{}".format(heap_rs,tempo,nome,curso,move,comp).replace("(","").replace(")","").replace("'",""))
+
+with open (r"C:\Users\diasg\Documents\GitHub\Estrutura_de_dados_2\Aula5\pheap ordenado.txt", "w") as arquivo:
+    arquivo.write("{}\n\n{}{}{}\n{}{}".format(heap_rs,tempo,nome,curso,pmove,pcomp).replace("(","").replace(")","").replace("'",""))
 
 print("end")
