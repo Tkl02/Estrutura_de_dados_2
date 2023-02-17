@@ -1,2 +1,2 @@
 # Estrutura_de_dados_2
- materia da faculdade
+Materia da faculdado, o codigo não esta otimizado.
